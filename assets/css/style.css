@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(18, 204, 204);
+}
+
+.titulo{
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Press Start 2P';
+}
+.pokemon-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 90%;
+    margin: 30px auto 30px auto;  
+}
+.pokemon-card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px black;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.pokemon-card .number{
+    font-size: 0.7em;
+    font-family: 'Press Start 2P';
+    padding: 2em;
+    
+}
+.pokemon-card .name{
+    font-size: 1.2em;
+    font-family: 'Press Start 2P';
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-image: url("../img/backimg.svg");
+    background-size: 135%;
+    background-position: center;
+}
+.img-container img{
+    width: 100%;
+    height: auto;
+   
+}
+
+@media (max-width: 992px) {
+    .pokemon-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .pokemon-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
